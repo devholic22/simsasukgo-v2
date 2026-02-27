@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+
+# Package managers
+.npm/
+
+# Build outputs
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Frontend local caches
+frontend/.next/
+frontend/out/
+frontend/dist/
+
+# Backend local state (Supabase-compatible)
+.supabase/
+backend/.supabase/
+backend/.temp/
+
+# Environment files
+.env
+.env.*
+!.env.example
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+backend/functions/.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Misc
+.tmp/
+tmp/
