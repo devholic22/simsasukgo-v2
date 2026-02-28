@@ -15,21 +15,22 @@ coverage/
 frontend/.next/
 frontend/out/
 frontend/dist/
+frontend/public/sw.js
+frontend/public/workbox-*.js
 
 # Backend local state (Supabase-compatible)
 .supabase/
 backend/.supabase/
 backend/.temp/
+backend/supabase/.temp/
 
 # Environment files
 .env
 .env.*
-!.env.example
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
-backend/functions/.env
+frontend/.env.*
+backend/.env.*
+!frontend/.env.example
+!backend/.env.example
 
 # Logs
 npm-debug.log*
