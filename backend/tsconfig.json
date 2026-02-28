@@ -1,0 +1,28 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "paths": {
+      "@backend/api/*": ["apps/api/src/*"],
+      "@backend/common/*": ["libs/common/src/*"],
+      "@backend/domain/*": ["libs/domain/src/*"],
+      "@backend/outbound/google/*": ["libs/outbound/google/src/*"],
+      "@backend/outbound/rdb/*": ["libs/outbound/rdb/src/*"],
+      "@backend/places/*": ["libs/places/src/*"],
+      "@backend/routes/*": ["libs/routes/src/*"]
+    },
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node", "vitest/globals"],
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "noEmit": true,
+    "allowImportingTsExtensions": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["apps/**/*.ts", "libs/**/*.ts"]
+}

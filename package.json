@@ -6,23 +6,30 @@
   "packageManager": "npm@10",
   "workspaces": [
     "frontend",
+    "backend",
     "packages/*"
   ],
   "scripts": {
     "dev": "npm run dev --workspace @simsasukgo/web",
     "dev:frontend": "npm run dev --workspace @simsasukgo/web",
     "build": "npm run build --workspace @simsasukgo/web",
-    "lint": "npm run lint --workspace @simsasukgo/web",
+    "lint": "npm run lint --workspace @simsasukgo/web && npm run deps:check",
+    "deps:check": "depcruise --config .dependency-cruiser.cjs backend/apps backend/libs frontend/app frontend/components frontend/lib packages/shared/src",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "dev:backend": "nodemon --watch backend --ext ts,sql,toml --ignore backend/.supabase --ignore backend/.temp --exec \"echo [backend] restart triggered (scaffold mode)\""
-  },
-  "dependencies": {
-    "next-pwa": "^5.6.0"
+    "dev:backend": "nodemon --watch backend/apps --watch backend/libs --ext ts --exec \"npm run start:dev --workspace @simsasukgo/backend\"",
+    "migration:run": "npm run migration:run --workspace @simsasukgo/backend",
+    "migration:revert": "npm run migration:revert --workspace @simsasukgo/backend",
+    "migration:show": "npm run migration:show --workspace @simsasukgo/backend",
+    "migration:create": "npm run migration:create --workspace @simsasukgo/backend --",
+    "migration:generate": "npm run migration:generate --workspace @simsasukgo/backend --",
+    "test": "npm run deps:check && npm run test:frontend && npm run test:backend",
+    "test:frontend": "npm run test --workspace @simsasukgo/web",
+    "test:backend": "npm run test --workspace @simsasukgo/backend"
   },
   "devDependencies": {
-    "@types/next-pwa": "^5.6.9",
+    "dependency-cruiser": "^16.10.4",
     "nodemon": "^3.1.10",
     "prettier": "^3.5.3"
   }
