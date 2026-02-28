@@ -4,19 +4,20 @@ const tabs = [
   { id: 'settings', label: '설정' },
 ];
 
+function getTabClassName(isSelected: boolean): string {
+  if (isSelected) {
+    return 'rounded-xl bg-brand-600 py-2 text-white';
+  }
+
+  return 'rounded-xl py-2 text-slate-600';
+}
+
 export function BottomNav() {
   return (
     <nav className='fixed inset-x-0 bottom-0 border-t border-slate-200 bg-white/95 backdrop-blur'>
       <ul className='mx-auto grid max-w-md grid-cols-3 gap-2 p-3 text-center text-sm'>
         {tabs.map((tab, index) => (
-          <li
-            key={tab.id}
-            className={
-              index === 0
-                ? 'rounded-xl bg-brand-600 py-2 text-white'
-                : 'rounded-xl py-2 text-slate-600'
-            }
-          >
+          <li key={tab.id} className={getTabClassName(index === 0)}>
             {tab.label}
           </li>
         ))}

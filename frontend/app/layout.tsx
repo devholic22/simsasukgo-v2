@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { BottomNav } from '../components/bottom-nav';
+import { ServiceWorkerRegister } from '../components/pwa/service-worker-register';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className='pb-24'>
         {children}
         <BottomNav />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );

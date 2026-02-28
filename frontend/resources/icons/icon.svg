@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">심사숙고 아이콘</title>
+  <desc id="desc">여행 지도 위에서 깊이 고민해 최적의 이동을 선택한다는 의미의 아이콘. GO 이중 의미 포함.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F5BFF"/>
+      <stop offset="1" stop-color="#0E2F9A"/>
+    </linearGradient>
+    <filter id="shadow" x="90" y="70" width="332" height="360" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#00134A" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="url(#bg)"/>
+
+  <path d="M110 132L184 110L258 132L332 110L402 132V356L332 334L258 356L184 334L110 356V132Z" fill="#2A66FF" fill-opacity="0.22" stroke="#A9C2FF" stroke-opacity="0.35" stroke-width="6"/>
+  <path d="M184 110V334M258 132V356M332 110V334" stroke="#A9C2FF" stroke-opacity="0.25" stroke-width="4"/>
+
+  <g filter="url(#shadow)">
+    <path d="M256 96C196.353 96 148 144.353 148 204C148 277.1 238.562 374.553 252.014 388.533C254.151 390.734 257.849 390.734 259.986 388.533C273.438 374.553 364 277.1 364 204C364 144.353 315.647 96 256 96Z" fill="#FFFFFF"/>
+
+    <path d="M308 163 A66 66 0 1 0 322 217 L323 197 L257 197 L257 217 L301 217 A46 46 0 1 1 292 175 Z" fill="#374151"/>
+
+    <circle cx="257" cy="205" r="86" stroke="#C8DAFF" stroke-width="8" stroke-dasharray="3 13"/>
+
+    <circle cx="338" cy="244" r="12" fill="#FFCF52" stroke="#FFF3CC" stroke-width="3"/>
+  </g>
+
+  <path d="M170 336C202 330 232 342 256 365C281 390 313 401 346 396" stroke="#D7E5FF" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 18" opacity="0.9"/>
+</svg>
